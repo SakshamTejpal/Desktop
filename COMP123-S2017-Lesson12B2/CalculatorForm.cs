@@ -33,7 +33,7 @@ namespace COMP123_S2017_Lesson12B2
         private bool _isOperandTwo;
 
         // PUBLIC PROPERTIES
-        public bool IsDecimalClicked {
+        public bool IsDecimalClicked { 
 
             get
             {
