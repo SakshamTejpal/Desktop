@@ -14,7 +14,7 @@ using System.Windows.Forms;
  * Student No: 300932743
  * Date: August 3, 2017
  * Description: Calculator Demo Project
- * Version: 1.3 - Created multiplication and division
+ * Version: 1.4 - Created Backspace
  */
 
 namespace COMP123_S2017_Lesson12B2
@@ -31,6 +31,7 @@ namespace COMP123_S2017_Lesson12B2
         private double _result;
 
         private bool _isOperandTwo;
+       // private string
 
         // PUBLIC PROPERTIES
         public bool IsDecimalClicked { 
@@ -173,7 +174,8 @@ namespace COMP123_S2017_Lesson12B2
 
 
 
-            //Debug.WriteLine("A Calculator Button was clicked");
+            //Debug.WriteLine("A Calculator Button was clicked"); 
+            
         }
 
         /// <summary>
@@ -197,7 +199,7 @@ namespace COMP123_S2017_Lesson12B2
                     this._showResult(operand);
                     break;
                 case "⌫":
-                    this.ResultTestBox.Text = ResultTextBox.Text.Remove(richTextBox1.Text.Length - 1, 1);
+                    this.backspace();
                     break;
                 case "±":
                     break;
@@ -274,6 +276,13 @@ namespace COMP123_S2017_Lesson12B2
             return 0;
 
         }
+        private void backspace()
+        {
+
+            ResultTextBox.Text =  ResultTextBox.Text.Remove(ResultTextBox.Text.Length - 1, 1);
+            
+        }
+
 
         /// <summary>
         /// This is the private _clear method. It resets / clears the calculator.
